@@ -23,6 +23,17 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Kiprotich", "12345678")
         test_user.save_user()
+        
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list), 1)
+        
+    def test_find_user_by_user_name(self):
+        self.new_user.save_user()
+        test_user = User("kiprotich", "12345678")
+        test_user.save_user()
+        
+        found_user = User.find_by_username("kiprotich")
+        self.assertEqual(found_user.user_name, test_user.user_name)
 
 
     def tearDown(self):
