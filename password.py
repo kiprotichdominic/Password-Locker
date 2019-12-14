@@ -14,7 +14,8 @@ class User:
 
     def delete_password(self):
         User.user_pass.remove(self)
-
+        
+    
 
 class Credentials:
     pass
