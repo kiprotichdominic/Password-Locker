@@ -40,11 +40,11 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Kiprotich", "12345678")
         test_user.save_user()
-        user_exists = User.contact_exists("Kiprotich")
+        user_exists = User.user_exists("Kiprotich")
         self.assertTrue(user_exists)
         
     def test_display_user(self):
-        self.assertEqual(user.display_users(), User.user_list)
+        self.assertEqual(User.display_users(), User.user_list)
 
 
     def tearDown(self):
