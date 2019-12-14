@@ -1,4 +1,6 @@
 from password import User
+import random
+import string
 
 
 def create_user(name, user_password):
@@ -26,6 +28,10 @@ def display_users():
     return User.display_all_users()
 
 
+def generate_password(user):
+    return User.generate_random_password()
+
+
 def main():
     user_name = input("Enter your user name > ")
 
@@ -38,7 +44,8 @@ def main():
 1. cu - to create a new user
 2. du - to display users
 3. fu - to find users
-4. esc - to quit        
+4. gp - to generate a random password
+4. esc - to quit
         """)
         short_code = input("Use short-codes to navigate > ").lower()
 
@@ -70,26 +77,27 @@ def main():
                     print("\n")
                     print("You don't have any saved passwords yet. Try saving one")
                     print("\n")
-            elif short_code == "fu":
-                print("Enter the username of the user you would like to search for.")
 
-                search_name = input()
-                if check_existing_users(search_name):
-                    search_name = find_user(search_name)
-                    print(f"{find_user.user_name} {find_user.user_password} ")
-                    print("-" * 20)
+        elif short_code == "fu":
+            print("Enter the username of the user you would like to search for.")
 
-                    print(f"User Name: {find_user.user_name}")
-                    print(f"User password: {find_user.user_password}")
+            search_name = input()
+            if check_existing_users(search_name):
+                search_name = find_user(search_name)
+                print(f"{find_user.user_name} {find_user.user_password} ")
+                print("-" * 20)
 
-                else:
-                    print("That contact does not exist")
+                print(f"User Name: {find_user.user_name}")
+                print(f"User password: {find_user.user_password}")
 
-            elif short_code == "esc":
-                print("Logged out")
-                break
             else:
-                print("I really didn't get that. Please use the short codes")
+                print("That contact does not exist")
+
+        elif short_code == "esc":
+            print("Logged out")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
 
 
 if __name__ == "__main__":
