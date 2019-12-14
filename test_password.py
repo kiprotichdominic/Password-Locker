@@ -18,6 +18,11 @@ class TestUser(unittest.TestCase):
         test_user = User("facebook", "1234")
         test_user.save_user()
         self.assertEqual(len(User.user_list), 2)
+        
+    def test_delete_user(self):
+        self.new_user.save_user()
+        test_user = User("Kiprotich", "12345678")
+        test_user.save_user()
 
 
     def tearDown(self):
