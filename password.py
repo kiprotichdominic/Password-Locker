@@ -9,13 +9,12 @@ class User:
         self.user_name = user_name
         self.user_password = user_password
 
-    def save_password(self):
+    def save_users(self):
         User.user_pass.append(self)
 
-    def delete_password(self):
+    def delete_user(self):
         User.user_pass.remove(self)
-        
-    
+
 
 class Credentials:
     pass
