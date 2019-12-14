@@ -34,6 +34,13 @@ class TestUser(unittest.TestCase):
         
         found_user = User.find_by_username("kiprotich")
         self.assertEqual(found_user.user_name, test_user.user_name)
+        
+    def test_user_exists(self):
+        self.new_user.save_user()
+        test_user = User("Kiprotich", "12345678")
+        test_user.save_user()
+        user_exists = User.contact_exists("Kiprotich")
+        self.assertTrue(user_exists)
 
 
     def tearDown(self):
