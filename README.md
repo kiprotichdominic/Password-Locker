@@ -66,6 +66,10 @@ This is a project that enable clients to store and retrieve their credentials up
 
 ## Support and contact details
 contact me @ kiprotichkorir36@gmail.com
+### Code beat
+
+- [![codebeat badge](https://codebeat.co/badges/5a24d588-5897-44e2-a38c-a1794cca1094)](https://codebeat.co/projects/github-com-kiprotichdominic-password-locker-master)
+
 ### License
 - [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
   

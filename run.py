@@ -66,10 +66,12 @@ def main():
             print("\n")
 
         elif short_code == "gp":
+            print("Please enter the social media you want to generate password for > ")
+            social_media = input("Enter account type > ")
             def random_password(stringlength):
                 letters = string.ascii_letters
                 return "".join(random.choice(letters) for i in range(stringlength))
-            print("Your random password is", random_password(8))
+            print(f"Your random password for {social_media} is: ", random_password(8))
 
         elif short_code == "du":
 
