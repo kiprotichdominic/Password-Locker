@@ -31,3 +31,12 @@ class User:
     @classmethod
     def display_all_users(cls):
         return cls.user_list
+
+    @classmethod
+    def login_user(cls):
+        return User.login_user()
+
+
+    @classmethod
+    def generate_random_password(cls):
+        pass
