@@ -67,6 +67,5 @@ This is a project that enable clients to store and retrieve their credentials up
 ## Support and contact details
 contact me @ kiprotichkorir36@gmail.com
 ### License
-The project is under[MIT license](/blob/master/LICENSE)
-Copyright &copy; 2019.All rigths reserved
+- [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
   
