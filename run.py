@@ -8,6 +8,10 @@ def create_user(name, user_password):
     return new_user
 
 
+def generate_password(user):
+    return User.generate_random_password()
+
+
 def save_user(user):
     user.save_user()
 
@@ -26,10 +30,6 @@ def check_existing_users(name):
 
 def display_users():
     return User.display_all_users()
-
-
-def generate_password(user):
-    return User.generate_random_password()
 
 
 def main():
@@ -64,6 +64,12 @@ def main():
             print("\n")
             print(f"New User {user_name} {user_password} has been created")
             print("\n")
+
+        elif short_code == "gp":
+            def random_password(stringlength):
+                letters = string.ascii_letters
+                return "".join(random.choice(letters) for i in range(stringlength))
+            print("Your random password is", random_password(8))
 
         elif short_code == "du":
 
