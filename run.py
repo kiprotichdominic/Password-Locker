@@ -146,18 +146,6 @@ def main():
             print(
                 f"Your random password is: ", random_password(8))
             print("You are now logged in: ")
-    elif ask == "yes":
-        user_name = input("Enter your User name > ")
-        print(
-            """
-For security reasons you will no be able to view your password as you type. Just continue typing
-"""
-        )
-        user_password = getpass("Enter your password > ")
-        if user_name == user_name and user_password == user_password:
-            print(f"Welcome {user_name}")
-        else:
-            print("Login Failed")
         while True:
             print("""
             USE THE SHORT CODES
