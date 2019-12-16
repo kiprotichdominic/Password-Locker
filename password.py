@@ -35,8 +35,3 @@ class User:
     @classmethod
     def login_user(cls):
         return User.login_user()
-
-
-    @classmethod
-    def generate_random_password(cls):
-        pass
