@@ -231,9 +231,20 @@ def main():
                 print("Enter the username of the user you would like to delete.")
                 my_delete = input("> ")
                 my_del = find_user(my_delete)
-                my_del.remove()
+                User.user_list.remove(my_del)
+                print(
+                    f"User with name {my_delete} has been removed succefully")
             else:
                 print("I really didn't get that. Please use the short codes")
+    else:
+        print("""
+██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗   ▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄☆
+██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝   ███████████████████████
+██║   ██║███████║██║   ██║██║     ██║      ▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓◤
+╚██╗ ██╔╝██╔══██║██║   █║██║     ██║      ▀░▐▓▓▓▓▓▓▌▀█░░░█▀
+ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║       ░░▓▓▓▓▓▓█▄▄▄▄▄█▀
+  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝        █▓▓▓▓▓▌
+""")
 
 
 if __name__ == "__main__":
