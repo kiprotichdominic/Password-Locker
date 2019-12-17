@@ -152,8 +152,9 @@ def main():
     1. cu - to create a new user
     2. du - to display users
     3. fu - to find users
-    4. gp - to generate a random password
-    4. esc - to quit
+    4. dl - to delete user
+    5. gp - to generate a random password
+    6. esc - to quit
             """)
             short_code = input("Use short-codes to navigate > ").lower()
 
@@ -202,11 +203,11 @@ def main():
                     for user in display_users():
                         print(f"{user.user_name} {user.user_password}")
                         print("\n")
-                    else:
-                        print("\n")
-                        print(
-                            "You don't have any saved passwords yet. Try saving one")
-                        print("\n")
+                else:
+                    print("\n")
+                    print(
+                        "You don't have any saved passwords yet. Try saving one")
+                    print("\n")
 
             elif short_code == "fu":
                 print("Enter the username of the user you would like to search for.")
@@ -226,6 +227,11 @@ def main():
             elif short_code == "esc":
                 print("Logged out")
                 break
+            elif short_code == "dl":
+                print("Enter the username of the user you would like to delete.")
+                my_delete = input("> ")
+                my_del = find_user(my_delete)
+                my_del.remove()
             else:
                 print("I really didn't get that. Please use the short codes")
 
